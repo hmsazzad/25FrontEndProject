@@ -38,7 +38,6 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   }, [url]);
 
   console.log(images);
-
   if (loading) {
     return <div>Loading data ! Please wait</div>;
   }
@@ -78,8 +77,8 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
                 key={index}
                 className={
                   currentSlide === index
-                    ? "bg-white h-4 w-4 rounded-[50%] my-8 mx-2 cursor-pointer"
-                    : "bg-gray-400 h-4 w-4 rounded-[50%] my-8 mx-2 cursor-pointer "
+                    ? "bg-gray-200 h-4 w-4 rounded-[50%] my-8 mx-2 cursor-pointer"
+                    : "bg-gray-400 h-3 w-3 rounded-[50%] my-8 mx-2 cursor-pointer  opacity-50"
                 }
                 onClick={() => setCurrentSlide(index)}
               ></button>
