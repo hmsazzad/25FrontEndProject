@@ -57,9 +57,10 @@ export default function LoadMore(){
             {
                 products && products.length?
                 products.map((item)=>(
-                <div className="border-4 border-indigo-500 text-center font-serif" key={item.id}>
+                <div className="bg-gray-100 text-center font-serif" key={item.id}>
                     <img src={item.thumbnail}
-                    alt={item.title}/>
+                    alt={item.title}
+                    className="bg-gray-200"/>
                     <p>{item.title}</p>
 
 
@@ -75,7 +76,7 @@ export default function LoadMore(){
                 ()=>setCount(count+1)
             }
             disabled={disableButton}
-            className="px-5 py-2 border-[4px] border-gray-600 bg-gray-500">
+            className={disableButton?"px-5 py-2 border-[4px] border-gray-600 bg-gray-500":"px-5 py-2 border-[4px] border-gray-600 bg-pink-500"}>
                 Load More
             </button>
         </div>
